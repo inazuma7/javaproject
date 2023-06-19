@@ -24,4 +24,52 @@ class TicTac {
         }
     }
 
+    static void p_holder (char [] []g_board, int pos, String user){
+        char syb ='X';
+        if(user.equals("You"))
+        {
+            syb ='X';
+        }
+        else if(user.equals("Com"))
+        {
+            syb='O';
+        }
+
+        switch(pos)
+        {
+            case 1:
+            g_board[0][0]=syb;
+            break;
+            case 2:
+            g_board[0][2]=syb;
+            break;
+            case 3:
+            g_board[0][4]=syb;
+            break;
+            case 4:
+            g_board[2][0]=syb;
+            break;
+            case 5:
+            g_board[2][2]=syb;
+            break;
+            case 6:
+            g_board[2][4]=syb;
+            break;
+            case 7:
+            g_board[4][0]=syb;
+            break;
+            case 8:
+            g_board[4][2]=syb;
+            break;
+            case 9:
+            g_board[4][4]=syb;
+            break;
+
+            default:
+            System.out.println("invalid input");
+
+        }
+
+        print_board(g_board);
+    }
 }
